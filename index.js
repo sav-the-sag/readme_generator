@@ -18,10 +18,23 @@ const questions = [
             }
         }
     },
+    {
+        type: 'input',
+        name: 'description',
+        message: "What is your project's description?",
+        validate: input => {
+            if (input) {
+                return true;
+            } else {
+                console.log('Please enter a description!');
+                return false;
+            }
+        }
+    },
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {};
 
 // TODO: Create a function to initialize app
 function init() {}
