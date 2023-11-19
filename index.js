@@ -31,6 +31,25 @@ const questions = [
             }
         }
     },
+    {
+        type: 'confirm',
+        name: 'confirmTable',
+        message: 'Do you want a Table of Contents?',
+        default: true
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'What are your installation instructions?',
+        validate: input => {
+            if (input) {
+                return true;
+            } else {
+                console.log('Please enter any info on how to install!');
+                return false;
+            }
+        }
+    },
 ];
 
 // TODO: Create a function to write README file
