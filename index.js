@@ -157,7 +157,20 @@ function writeToFile(fileName, data) {
 };
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions)
+        .then(answers => {
+            console.log(answers);
+            return generateMarkdown(answers);
+        })
+        .then(pageMarkdown => {
+            writeToFile('./dist/README.md', pageMarkdown);
+            console.log('README.md created!')
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+}
 
 // Function call to initialize app
 init();
