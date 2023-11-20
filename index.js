@@ -50,6 +50,93 @@ const questions = [
             }
         }
     },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'What is your usage information?',
+        validate: input => {
+            if (input) {
+                return true;
+            } else {
+                console.log('Please enter any info for usage!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'What License applies to your application?',
+        choices: [
+            'None',
+            'Apache license 2.0',
+            'Boost Software License 1.0',
+            'BSD 2-clause "Simplified" license',
+            'BSD 3-clause "New" or "Revised" license',
+            'Creative Commons Zero v1.0 Universal',
+            'Do What The F*ck You Want To Public License',
+            'Eclipse Public License 1.0',
+            'GNU Affero General Public License v3.0',
+            'GNU General Public License v2.0',
+            'GNU General Public License v3.0',
+            'GNU Lesser General Public License v3.0',
+            'MIT',
+            'Mozilla Public License 2.0',
+            'The Unlicense'
+        ]        
+    },
+    {
+        type: 'input',
+        name: 'contribute',
+        message: "What are your contribution guidelines?",
+        validate: input => {
+            if (input) {
+                return true;
+            } else {
+                console.log('Please enter any how to contribute info!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'What are your test instructions?',
+        validate: input => {
+            if (input) {
+                return true;
+            } else {
+                console.log('Please enter any how to test info!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'username',
+        message: "What is your GitHub Username?",
+        validate: input => {
+            if (input) {
+                return true;
+            } else {
+                console.log('Please enter a username!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: "What is your email address?",
+        validate: input => {
+            if (input) {
+                return true;
+            } else {
+                console.log('Please enter a email!');
+                return false;
+            }
+        }
+    },
 ];
 
 // TODO: Create a function to write README file
