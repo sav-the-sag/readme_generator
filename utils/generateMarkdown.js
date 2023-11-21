@@ -5,7 +5,7 @@ function renderLicenseBadge(license) {
   if (license == "None") {
     return ``;
   }
-  let result = licensesDetails.filter(licensesDetail => licensesDetail.name == license);
+  let result = licensesDetails.filter(licenseDetail => licenseDetail.name == license);
   return result[0].badge;
 }
 
