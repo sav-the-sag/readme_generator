@@ -20,4 +20,3 @@ const licensesDetails = [
         'link': `http://unlicense.org/`
     }
 ]
-module.exports = generateMarkdown;
