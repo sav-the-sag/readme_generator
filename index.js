@@ -163,7 +163,7 @@ function init() {
             return generateMarkdown(answers);
         })
         .then(pageMarkdown => {
-            writeToFile('./dist/README.md', pageMarkdown);
+            writeToFile('./README.md', pageMarkdown);
             console.log('README.md created!')
         })
         .catch((error) => {
